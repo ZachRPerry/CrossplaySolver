@@ -275,6 +275,30 @@ function App() {
       )}
 
       <main className="flex gap-6 p-4 items-start">
+        <div className="flex flex-col gap-3 w-64 text-base text-gray-500 shrink-0">
+          <div>
+            <p className="font-semibold text-gray-600 mb-1">Entering tiles</p>
+            <ul className="flex flex-col gap-0.5">
+              <li>Click a cell, then type a letter</li>
+              <li>Click the same cell to toggle direction</li>
+              <li>Press <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-sm">?</kbd> or <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-sm">Space</kbd> to place a blank</li>
+              <li><kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-sm">Backspace</kbd> to delete</li>
+              <li><kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-sm">Esc</kbd> to deselect</li>
+              <li>Arrow keys to move</li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-600 mb-1">Finding moves</p>
+            <ul className="flex flex-col gap-0.5">
+              <li>Enter your rack letters (use <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-sm">?</kbd> for blanks)</li>
+              <li>Click <strong>Solve</strong> to find top moves</li>
+              <li>Hover a move to preview it on the board</li>
+              <li>Click a move to select it</li>
+              <li>Click <strong>Play</strong> or press <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-sm">Enter</kbd> to commit</li>
+            </ul>
+          </div>
+        </div>
+
         <div ref={boardRef} className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <button
@@ -344,6 +368,7 @@ function App() {
             <p className="text-sm text-gray-400 text-center">Click Solve to find moves</p>
           )}
         </div>
+
       </main>
     </div>
   )
